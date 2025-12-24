@@ -5,7 +5,7 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-xl text-sm font-semibold transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
   {
     variants: {
       variant: {
@@ -15,11 +15,16 @@ const buttonVariants = cva(
         secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
+        host: "bg-primary text-primary-foreground shadow-[0_0_30px_hsl(175_80%_50%/0.4)] hover:opacity-90 transform hover:scale-[1.02]",
+        accent: "bg-accent text-accent-foreground shadow-[0_0_30px_hsl(280_70%_60%/0.4)] hover:opacity-90 transform hover:scale-[1.02]",
+        success: "bg-success text-success-foreground shadow-[0_0_20px_hsl(145_70%_45%/0.4)] hover:bg-success/90",
+        glass: "bg-card/40 backdrop-blur-lg border border-border/50 text-foreground hover:bg-card/60",
       },
       size: {
         default: "h-10 px-4 py-2",
         sm: "h-9 rounded-md px-3",
         lg: "h-11 rounded-md px-8",
+        xl: "h-14 rounded-2xl px-10 text-base",
         icon: "h-10 w-10",
       },
     },
